@@ -2,7 +2,7 @@
 
 docker build -t test .
 
-# OpenCL is broken on Intel(R) 10th Generation Core i5 (code named Ice Lake) 
+# OpenCL is broken on a Dell Inc. XPS 13 7390 2-in-1/06CDVY Laptop (code named Ice Lake) 
 docker run -it --rm --device /dev/dri:/dev/dri test clinfo
 
 # OpenCL works when removing the conflicting Media SDK userspace driver library
