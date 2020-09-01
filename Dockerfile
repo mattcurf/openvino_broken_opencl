@@ -6,13 +6,15 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
       software-properties-common \
       ca-certificates \
       wget \
+      cpio \
       gnupg-agent \
       lsb-release 
 
 # Install OpenCL
 RUN echo "deb [trusted=yes arch=amd64] https://repositories.intel.com/graphics/ubuntu bionic main" > /etc/apt/sources.list.d/intel-graphics.list && \ 
    apt-get update && apt-get install -y --no-install-recommends \
-      intel-opencl 
+      intel-opencl \
+      clinfo
 
 # Install OpenVino 2020.4
 ARG DOWNLOAD_LINK=http://registrationcenter-download.intel.com/akdlm/irc_nas/16803/l_openvino_toolkit_p_2020.4.287.tgz
