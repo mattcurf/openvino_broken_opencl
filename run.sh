@@ -7,6 +7,6 @@ docker build -t test:20.04 -f Dockerfile:20.04 .
 docker run -it --rm --device /dev/dri:/dev/dri test clinfo
 docker run -it --rm --device /dev/dri:/dev/dri test:20.04 clinfo
 
-# OpenCL works when removing the conflicting Media SDK userspace driver library
+# OpenCL works when removing the conflicting Media SDK userspace driver library libigdgmm.so.11
 docker run -it --rm --device /dev/dri:/dev/dri test rm /etc/ld.so.conf.d/intel-mediasdk.conf && clinfo
 docker run -it --rm --device /dev/dri:/dev/dri test:20.04 rm /etc/ld.so.conf.d/intel-mediasdk.conf && clinfo
