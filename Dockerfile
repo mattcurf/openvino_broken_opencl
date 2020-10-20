@@ -17,8 +17,8 @@ echo "deb [arch=amd64] https://repositories.intel.com/graphics/ubuntu bionic mai
       intel-opencl \
       clinfo
 
-# Install OpenVino 2020.4
-ARG DOWNLOAD_LINK=http://registrationcenter-download.intel.com/akdlm/irc_nas/16803/l_openvino_toolkit_p_2020.4.287.tgz
+# Install OpenVino 2021.1
+ARG DOWNLOAD_LINK=http://registrationcenter-download.intel.com/akdlm/irc_nas/17062/l_openvino_toolkit_p_2021.1.110.tgz
 RUN mkdir -p /tmp/openvino_installer && cd /tmp/openvino_installer && \
     wget -c $DOWNLOAD_LINK && \
     tar xf l_openvino_toolkit*.tgz && \
